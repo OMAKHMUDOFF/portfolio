@@ -84,7 +84,7 @@ button {
 
   /* button style */
   padding: 15px 35px;
-
+  transition: 0.2s;
   cursor: pointer;
   background: rgba(3, 3, 4, 0.5);
   border: 2px solid rgba(255, 255, 255, 0.3);
@@ -114,6 +114,7 @@ header h1 {
   border-radius: 32.5px;
   padding: 24px 40px;
   border: none;
+  transition: 0.2s;
 
   font-family: var(--rubik);
   font-weight: 700;
@@ -192,6 +193,7 @@ header h1 {
   background-color: #ff9142;
   padding: 20px 50px;
   border-radius: 47px;
+  transition: 0.2s;
 
   /*button font style*/
   color: white;
@@ -222,6 +224,8 @@ header h1 {
   border: 1px solid #ff9142;
   border-radius: 32.5px;
   margin-top: 54px;
+
+  transition: 0.2s;
 }
 
 .project_cards {
@@ -393,6 +397,26 @@ footer hr {
   opacity: 1;
 }
 
+.explore_btn button:active,
+.discover_btn button:active {
+  background-color: #ffffff00;
+  outline: 1px solid #ff9142;
+  transform: scale(0.9);
+}
+
+.projects .title .explore_btn button:active {
+  background-color: #ff9142;
+  border: 1px solid #ff9142;
+}
+
+.navbar .links button:active {
+  /* button style */
+  cursor: pointer;
+  background: #ff9142;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+}
+
 input[type="checkbox"] {
   display: none;
 }
@@ -422,7 +446,8 @@ input[type="checkbox"] {
   }
 
   .title_quote figure img {
-    width: 100%;
+    /* width: 100%; */
+    width: 15vw;
   }
 
   .leftAbout .top h1 {
@@ -537,6 +562,10 @@ input[type="checkbox"] {
   .testimonial {
     padding: 83px 100px 119px;
   }
+
+  .title_quote figure img {
+    width: 15vw;
+  }
 }
 
 @media (max-width: 800px) {
@@ -592,6 +621,11 @@ input[type="checkbox"] {
     font-size: 40px;
   }
 
+  .title_quote figure img {
+    /* width: 100%; */
+    width: 15vw;
+  }
+
   #about {
     gap: 45px;
   }
@@ -642,7 +676,7 @@ input[type="checkbox"] {
 
   .hamburger_menu {
     display: none;
-    padding: 15%;
+    padding: 80px 50px;
     position: absolute;
     top: 0;
     left: 100%;
@@ -651,7 +685,7 @@ input[type="checkbox"] {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     height: 100vh;
-    transition: .4s;
+    transition: 0.4s;
   }
 
   .hamburger_menu .links {
@@ -662,7 +696,7 @@ input[type="checkbox"] {
     font-size: 20px;
   }
 
-  .hamburger_menu .links button{
+  .hamburger_menu .links button {
     padding: 15px 40px;
   }
 
@@ -689,7 +723,124 @@ input[type="checkbox"] {
   }
 
   input:checked ~ .container .hamburger_menu {
-    left: 47.5%;
+    left: calc(100% - 250px);
     display: block;
+  }
+
+  input:checked ~ .container .menu {
+    display: none;
+  }
+
+  .title_quote figure img {
+    width: 15vw;
+  }
+
+  .testimonial {
+    padding: 83px 50px 70px;
+  }
+}
+
+@media (max-width: 581px) {
+  #about {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+  }
+
+  .title_quote figure {
+    display: none;
+  }
+
+  .contact {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .testimonial {
+    text-align: center;
+  }
+
+  footer {
+    padding: 100px 80px;
+  }
+
+  .mail a {
+    font-size: 20px;
+  }
+
+  .title_quote {
+    font-size: 30px;
+    justify-content: center;
+  }
+
+  .test_text p {
+    text-align: justify;
+  }
+
+  .project_cards {
+    grid-template-columns: repeat(1, calc(100%));
+  }
+
+  header h1 {
+    font-size: 35px;
+  }
+
+  .projects .title h1 {
+    font-size: 30px;
+  }
+
+  .leftAbout .top p {
+    text-align: justify;
+  }
+
+  #about {
+    padding: 115px 60px 145px;
+  }
+}
+
+@media (max-width: 391px) {
+  .mail h1 {
+    text-align: center;
+  }
+
+  .mail a {
+    font-size: 20px;
+  }
+
+  .title_quote {
+    font-size: 20px;
+  }
+
+  .test_text p {
+    font-size: 14px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 281px) {
+  header h1 {
+    font-size: 25px;
+  }
+
+  #about {
+    padding: 115px 30px 60px;
+  }
+
+  .projects {
+    padding: 60px 30px 83px;
+  }
+
+  .testimonial {
+    padding: 83px 30px 70px;
+  }
+
+  footer {
+    padding: 100px 30px;
   }
 }
