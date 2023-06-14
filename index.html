@@ -20,20 +20,37 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <input type="checkbox" id="hamburger" />
     <div class="container">
       <nav class="navbar">
         <div class="logo_name">
           <h1>Aar<b>o</b>nn</h1>
         </div>
-        <div class="links">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About me</a></li>
-            <li><a href="#project">My works</a></li>
-          </ul>
 
-          <div class="contact_btn">
-            <button>Contact</button>
+
+        <label for="hamburger" class="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        
+        <div class="hamburger_menu">
+         
+          <div class="links">
+            <label for="hamburger" class="close_menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About me</a></li>
+              <li><a href="#project">My works</a></li>
+            </ul>
+
+            <div class="contact_btn">
+              <button>Contact</button>
+            </div>
           </div>
         </div>
       </nav>
@@ -257,10 +274,10 @@
           </div>
         </div>
 
-        <hr>
+        <hr />
 
         <div class="footer_bottom_text">
-          <h3>© 2023. Ideapeel. All rights reserved. </h3>
+          <h3>© 2023. Ideapeel. All rights reserved.</h3>
         </div>
       </footer>
     </div>
